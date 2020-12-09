@@ -42,7 +42,7 @@ namespace ConsoleApp7
 
                         // nimm das Code-snippet und mache eine Funktion daraus (am besten übergibst Du nur den String der Regular Expression) 
                         // und dann:
-                        Console.WriteLine(regexnew("bar"));
+                        Console.WriteLine("");
                         
                         // Zähle folgende Strings in der Datei:
                         // bar
