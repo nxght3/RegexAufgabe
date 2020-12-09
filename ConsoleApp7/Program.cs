@@ -16,26 +16,17 @@ namespace ConsoleApp7
 
          regexnew(new Regex("bar|Bar"));                                  
          regexnew(new Regex("alive|Alive"));
-            // alle Zeilen die entweder
-            // You got me rockin and a-rollin
-            // oder 
-            //Rockin and a - reelin
-         regexnew(new Regex(""));
-                        // "brother" oder "mother" aber sonst nichts
-
-                        // evolution ohne ein "r" davor
-
-                        // "you" oder "you're" aber kein "your"  
-
-                        // know am Ende einer Zeile
-
-                        // wieviele Worte beginnen mit jedem buchstaben des Alphabets- daher Anzahl aller *Worte* die mit "a" beginnen (case-insensitive), b, c, d ...
-
-                        // komplizierter: gib die Zeilen aus die 
-                        // Bands und Liedertitle enthalten
-                        // nur die Bands
-                        // nur die Liedertitel
-                        // die Anzahl der Zeilen jedes Liedtitles
+         regexnew(new Regex("You got me rockin and a-rollin|Rockin and a - reelin"));
+         regexnew(new Regex("evolution"));
+         regexnew(new Regex("brother|mother")); 
+         regexnew(new Regex("you| you're"));
+         regexnew(new Regex(".*know"));
+         regexnew(new Regex("\\sa(.*)"));
+            // komplizierter: gib die Zeilen aus die 
+            // Bands und Liedertitle enthalten
+            // nur die Bands
+            // nur die Liedertitel
+            // die Anzahl der Zeilen jedes Liedtitles
             Console.ReadKey();
         }
         static void regexnew(Regex rx)
@@ -50,6 +41,7 @@ namespace ConsoleApp7
                     System.Diagnostics.Debug.WriteLine(matchCollection.Count);
                     foreach (Match item in matchCollection)
                     {
+                        Console.Write(item);
                         i++;
                     }
                 }
